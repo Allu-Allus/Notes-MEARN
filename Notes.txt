@@ -1,0 +1,404 @@
+-------------------------------------------------------JavaScript-------------------------------------------------------------------------------
+DATE-02/06/25
+-------------
+
+JavaScript - Programming Language (Scripting Language)
+
+Features of js
+--------------
+-> its used to provide behavior to a web application.
+-> used in both front-end as well as back-end.
+    -initially js was introduced as front-end language.
+    -v8 engine is used to run js in browser.
+    -nodejs environment-nodejs environment have v8 engine to run js outside the browser.
+    -front-end-behavior
+    -back-end-logical operations
+-> it is categorized as dynamically typed language.
+    -dynamically typed language-data type changes according to the assigned value.
+-> its a single thread programming language
+    -line by line execution
+->it supports both procedured and object oriented programming (oops) paradigm(style of programming).
+
+procedured Programming
+----------------------
+- js file-filename.js
+- run a file-node filename.js
+- display-console.log(content);
+
+Data Types
+----------
+-> there are 2 types of data types in js:
+    1. Primitive Data Types
+    2. Non Primitive Data Types
+
+Primitive Data Types
+--------------------
+-> base data types.
+-> immutable-cannot change the original value but can be reassigned.
+
+    1. String-sequence of characters.
+        eg: 'text' , "text"
+    2. Number-represents integer and floating point numbers.
+        eg:25,26.56
+    3. Bigint-it represents larger number outside the boundary of number category.
+        eg: 789456123114235987
+    4. Null-intentional absence of value
+        eg: let x=null 
+    5. Undefined-not assigned a value.
+        eg: let x
+    6. Boolean-logical value-true or false
+    7. Symbol-used to uniquely identify a content
+             -used in creating libraries
+             -let variable=symbol("content")
+
+Non Primitive Data Types
+------------------------
+->its a derived data type
+->mutable-can change the original value and can reassign new values.
+    8. Object-data is stored in key:value
+             eg: array,object,function etc...
+             -combination of primitive data types
+-------------------------------------------------------------------------------------------------------------------------------------------------
+DATE:03/06/25
+-------------
+
+Variables
+---------
+->used to store data.
+->identifiers-rules to create variables:
+            - variable name can have alphabets ,numbers and underscore etc..
+            - variable name should not start with digit or number, but subsequence characters can be digit.
+            - if the variable name contains more than one word the words should not have space.(variable name)
+                -camelcase - variableName
+                -snakecase - variable_name
+            - syntax : VariableName = value
+                    keyword VariableName = value
+
+Keywords
+--------
+-> set of reserved word
+-> it gives special meaning to the variable
+    1. var - reassigning is possible ,redeclaration is allowed, Hoisting possible
+    2. const - reassigning is not possible , redeclaration not allowed , Hoisting is not possible
+    3. let - reassign is possible, redeclaration is not allowed, block level scope, Hoisting is not possible
+
+    Hoisting
+    --------
+    - using a variable before it is declared.
+
+ Template Literals
+ ----------------
+
+ -> its a way of displaying content.
+    syntax:
+            console.log(`content ${variableName}`);
+
+Concatenation
+-------------
+-> add up of data.
+    -string + string = string
+    -string + number = string
+    -number + number = number
+
+ Operators
+ ---------
+ 1. Assignment Operator (=)
+ 2. Arithmetic Operators (+,-,/,%(modulus),**(exponential))    
+ 3. Relational Operators (>,>=,<,<=,==,===)
+    - returns boolean values.
+    == - compare only the values
+    === - compare value and data type
+ 4. Logical Operators 
+    - between one or more relational operators 
+    - returns boolean value
+        1. and (&&)
+            T && T = T
+            T && F = F
+            F && T = F 
+            F && F = F 
+        2. or (||)
+            T || T = T
+            T || F = T
+            F || T = T 
+            F || F = F 
+        3. not  (!)
+            ! T = F
+            ! F = T
+        
+ 5. Increment (++) / Decrement (--) Operators
+        x ++ => x = x + 1
+        y -- => y = y - 1
+
+ 6. Shorthand Operators
+    x = x + 1 -> x+=1
+    y = y - 1 -> y-=1
+
+ 7. Ternary Operator
+    syntax:
+           condition ? true statements : false statements
+
+ 8. Truthy Operator
+    syntax :
+            condition && true statement
+
+Conditional statements / decision making statements
+---------------------------------------------------
+    - executes based on the condition 
+        syntax : if(condition){
+
+            statements
+
+        }else if(condition){
+
+            statements
+
+            }else {
+
+            statements
+
+        }
+
+        -> at a time only one case executes.
+    
+    Concept
+    -------
+    positive - number should be greater than 0.
+    negative - number should be less than 0.
+    zero - neither positive nor negative.
+
+    even - number divided by 2 gives reminder as 0 (including 0).
+    odd - number divided by 2 does not gives a reminder as 0.
+
+    divisibility -  A is divisible by B means A divided by B give reminder as 0 .
+
+    Looping statements
+    ------------------
+    -> used to execute a set of code repeatedly at a particular part of a program file.
+    -> to exit a loop the condition must be false
+        1. while
+            syntax:
+                    variable initialization
+                    while(condition){
+                        statements
+                        exit condition/Increment/Decrement statements
+                    }
+                   
+                    -> when number of iteration is not sure
+        2. for 
+            syntax:
+                    for(variable initialization;condition;exit condition){
+                        statements
+                    }
+                     -> when number of iteration is known
+
+
+FUNCTION
+--------
+-> To do task repeatedly at different location of the programming file.
+-> It helps to reduce number of codes in the programming file.
+-> It have 2 parts:
+    1. function definition -> where the task is defined.
+        syntax:
+                function functionName (arg1,arg2,......argn){
+                    statement/task
+                }
+    2. function call -> inorder to execute the task.
+        syntax:
+                functionName(arg1,arg2,........argn)
+    argument/parameter-> values outside the function and its optional
+
+-> Variable inside a function is having function scope , it cannot be accessed outside the function.
+-> Inorder to access variables outside the function we need to use return statement.
+-> Statements after the return statement will not be executed hence return statement should be placed at the last of the function.
+
+Arrow function(=>)
+------------------
+syntax:
+        const variablename = () => statement
+        const variablename = () =>{ statement,......}
+
+        variablename()
+
+Advantages:-
+    -> syntax more less as compared to regular function.
+    -> if the arrow function having single statement, then the return will happen automatically.
+    -> better performance as compared to regular function.
+
+Function Hoisting
+-----------------
+
+-> calling a function before it is defined.
+-> functional hoisting is possible for regular function, but arrow function does not support functional hoisting.
+
+Types of Functions
+------------------
+    1. Predefined Functions 
+        - these are built-in functions. 
+        - no need to define the function
+        - eg:- console.log(), math.floor, Math(),typeOf()...
+    
+    2. Callback Functions
+        - functions that are passed as an argument to another function and execute later by the parent function.
+
+    3. Nested Function
+        -  function defined inside another function.
+        -  closure property - variable inside the parent function can accessed inside child function but child variable cannot be accessed in parent function.
+
+    4. Synchronous function
+        - functions which does not have any time delay
+
+    5. Asynchronous function
+        - functions with time delay in execution.
+        eg:- serTimeout. API
+
+Data Structure
+--------------
+-> a specialised format for organising, processing, retrieve and storing data.
+    eg:- stack, queue, array, tree, etc...
+
+Array
+-----
+-> unlike variables array can hold more than one data.
+-> definition - array is a single variable that can  store more than one data of different data types, that are seperated by commas and enclosed within '[]'(square bracket)
+
+    syntax:
+            arrayName = [data1, data2, .... datan]
+    - each item in array is given a index value.
+    - index value starts with 0 and ends with length-1
+    - number of items in an array - length (total of location)
+
+    {
+        key:value = index:value 
+    }
+
+    ways to access each item from an array
+    --------------------------------------
+    1. normal for loop
+    2. for in - Directly return indexes of the given array 
+    3. for of - return directly the item 
+
+Array operations
+----------------
+1. push()- to add new item to the end of an array
+2. unshift()- to add item to start of an array
+3. pop()- to remove last item of an array
+4. shift()- to remove first item of an array
+5. sort()- it arrange the array in ascending(h-l) or descending(l-h) order
+6. forEach()- to access each item from an array (for loop)
+            syntax: 
+                    array.forEach((variable)=>statement)
+7. map()- to access each item from an array, it returns a new array of the same number of parent array.
+        syntax:
+                newArray = array.map((variable)=>statement)
+8. reduce()- it iterate through the array and return a single value from the array 
+            eg: sum,highest,average,lowest
+            syntax:
+                    value=array.reduce((item1,item2)=>statement)
+                                       OR
+                    value=array.reduce((previous value,current value)=>statement)
+9. filter()- it returns a new array having elements satisfying a specific condition
+            syntax:
+                    newArray = parentArray.filter((variable_name)=>condition)
+10. some()- it returns boolean values based on the condition
+            syntax:
+                    value = parentArray.some((variable_name)=>condition)
+11. find()- it returns the first element satisfying the condition
+            syntax:
+                    value = parentArray.find((variable_name)=>condition)
+12. flat(dept)- used to change the dimensions of an array.
+              - dept refers to how deep a nested array need to be flattened.
+              - Dept = infinity makes the array change its dimensions directly to one dimension 
+13. includes()- to check whether a given item is present in the array or not.
+                syntax:
+                        array.includes("item")
+14. splice()- to add or remove items at different position in an array.
+                syntax:
+                        array.splice(startindex, count_to_remove, item_to_added)
+15. indexof()- to get a index of an element 
+16. lastIndex()- to get an index value of last element satisfying the condition.
+
+
+Nested Array- Array within an array.
+
+Linear Search
+-------------
+Binary - time consumption by reducing the number of iteration 
+       - array should be in ascending order 
+
+       0 1 2 3 4 5
+       2 3 4 10 11 12
+        low = 0
+        up = 5
+        mid = math.floor((low+up)/2)
+            =0+5/2 = 5
+            2.5=2
+        
+        4==2 ? no
+        4<2 ? no
+        4>2 ? yes
+
+        up = mid -1 =2-1=1
+        mid = 0+1/2 =0.5=0
+        a[0]=2
+        2==2 yes
+        2<2
+        2>2
+
+String
+------
+-> sequence of characters.
+
+String operations
+ -----------------
+1. startsWith()-it checks whether a string starts with a specific character
+                -case sensitive
+                -returns a boolean value 
+2. endsWith()-it checks whether a string ends with a specific character
+                -case sensitive
+                -returns a boolean value 
+3. toUpperCase()-to convert a string into capital letters
+4. toLowerCase()-to convert a string into small letters
+5. substring()-to create a substring from a given string.
+                syntax:
+                        string.substring(start,end)
+              - ending index will be excluded
+6. slice(start,end)-to get a small portion of a string 
+                   - ending index will be excluded
+                   -accept negative value
+7. trim()-remove the space in the ends (start and end)
+8. replace()-it replace the first matching search item.
+9. replaceAll()-it replace all the matching search items.
+10. Array.from()-get all characters of a string as array
+11.split(seperator)-devide the string based on the seperator and return a new array.
+
+OBJECTS
+-------
+-> unlike array it can store more than one data of different data type with more clarity
+-> definition- object is a single variable that can store more than one data of different data type with more clarity as key:value pair,that are separated by commas and enclosed within curly brackets.
+syntax:
+        objectName = {
+            key:value1,
+            key:value2,
+            .
+            .
+            .
+
+        }
+-> to access a data from object 
+    - objectName["key"] = can be used in the case of exact key or variable key
+    - objectName.key = only if there is exact key 
+-> for in can be used to access the key in an object
+
+Add data to an object
+---------------------
+syntax:
+        objectName["key"]="value"
+        Object.assign()
+
+update data to an object
+---------------------
+objectName[key]=value
+
+Delete data to an object
+---------------------
+delete objectName.key
