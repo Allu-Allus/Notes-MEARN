@@ -21,9 +21,10 @@ Features of js
 
 procedured Programming
 ----------------------
-- js file-filename.js
-- run a file-node filename.js
-- display-console.log(content);
+-> Programming paradigm where series of computational steps are carried out. Unlike oops prodedural consider both data and methods as different entities
+- js file - filename.js
+- run a file - node filename.js
+- display - console.log(content);
 
 Data Types
 ----------
@@ -402,3 +403,140 @@ objectName[key]=value
 Delete data to an object
 ---------------------
 delete objectName.key
+
+-------------OOPS-Object Oriented Programming -------------------
+-----------------------------------------------------------------
+
+-> oops - its a modern programming paradigm(style) which consider real time entities into class and object.
+
+Basics
+------
+1. class - blueprint which contains common feature from which different objects are created.
+2. object - its a real time entity created from the class.(instance of a class)
+3. reference - actual memory location where properties  and methods are stored.
+
+property - its a variable inside a class
+method - functions inside a class
+
+syntax:
+        class classname{
+         //properties
+        //constructor
+        //method
+        }
+
+constructor - constructors are used to initialize the property. 
+No mandatory to place all the above components inside the class always.
+
+syntax to create an object:
+--------------------------
+const objectName = new classname()
+
+syntax of constructor
+---------------------
+constructor(){
+
+}
+
+syntax to define a method
+-------------------------
+methodname(){
+
+}
+
+Pillers of OOPS
+---------------
+1. Inheritance
+2. Polymorphism
+3. Encapsulation
+4. Abstraction 
+
+1. Inheritance
+--------------
+-> Its used to access methods and properties from one class to another.
+-> Parent class - the class from which the data are taken 
+                -super class/base class
+-> Child class - the class which access the data
+                - derived class/sub class
+
+Types of classical Inheritance
+------------------------------
+1. Single Inheritance - directly support
+2. Multi Level Inheritance - directly support
+3. Hierarchical Inheritance - directly support
+4. Multiple Inheritance - partially support
+5. Hybrid Inheritance - partially support
+
+2. Polymorphism
+---------------
+-poly - many 
+-morphism - forms
+
+1. Method overloading
+2. Method overriding
+
+1. Method overloading
+-----------------
+- methods with same name but different arguments, execute based on number of arguments.
+- Directly js is not supporting method overloading
+
+2. Method overriding
+--------------------
+- methods with same name and same number of arguments.
+- execute the last written method 
+- js supports method overriding
+
+Exception Handling
+------------------
+
+Exception - Run time error
+ syntax:
+        try{
+            statements
+        }catch{
+            statements - execute only when the error in try block
+        }finally{
+            statements - execute in both cases 
+        }
+
+.........................JavaScript in FrontEnd...........................
+..........................................................................
+
+-> Runs by Browser 
+-> Browser - its an application program that provides an interface to interact with the information/resource available on internet.
+-> Browser understanding languages - HTML,CSS & JavaScript
+-> JavaScript provides behavior to the webpage
+-> JavaScript access the dom Structure to provide behavior.
+
+DOM 
+---
+
+- Document Object Model
+- Its a tree Structure of the html document.
+- Created by browser
+
+Ways to apply js in html document
+---------------------------------
+
+1.Internal
+            <script></script>---- after body
+2.External
+            need to link - <script src="path></script>
+            filename - filename.js
+
+ways to access html elements using js
+-------------------------------------
+1. document.getElementByTagname()
+2. document.getElementByClassname()
+3. document.getElementById()
+4. document.querySelector()
+5. document.querySelectorAll()
+
+ways to access content from a html tag 
+--------------------------------------
+-> innerHTML 
+
+Events
+------
+->Actions perform by the user which leads to a change in DOM
+-> eg: click, submit, load
